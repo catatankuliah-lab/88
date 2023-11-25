@@ -1,10 +1,10 @@
-<?php $this->extend('owner/layout') ?>
+<?php $this->extend('admin/layout') ?>
 <?php $this->section('content') ?>
-<div class="container-fluid">
-    <div class="row">
+
+    <div class="row p-2">
         <div class="col-md-12 col-lg-12">
             <div class="card-body">
-                <h4 class="card-title">List Pegawai</h4>
+                <h6 class="card-title">List KPM</h6>
                 <h6 class="card-subtitle">
                     Klik <a style="font-weight: bolder;" href="<?= base_url('owner/kasir/create') ?>">disini</a> untuk menambahkan data karyawan (kasir dan admin)
                 </h6>
@@ -29,5 +29,5 @@
             </div>
         </div>
     </div>
-</div>
+
 <?php $this->endSection() ?>

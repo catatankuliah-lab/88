@@ -8,15 +8,17 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->group('admin', function ($routes) {
     $routes->get('/', 'AdminController::index');
+    // Routes KPM //
+    $routes->get('kpm/', 'AdminController::index_kpm');
+    $routes->get('kpm/create', 'AdminController::create_kpm');
+    $routes->post('kpm/add', 'AdminController::add_kpm');
+    $routes->get('kpm/edit/(:segment)', 'AdminController::edit_kpm/$1');
+    $routes->post('kpm/update/(:segment)', 'AdminController::update_kpm/$1');
+    $routes->get('kpm/delete/(:segment)', 'AdminController::delete_kpm/$1');
 });
 
 $routes->group('admin/kpm', function ($routes) {
-    $routes->get('/', 'AdminController::index-kpm');
-    $routes->get('/create-kpm', 'AdminController::create-kpm');
-    $routes->post('/add-kpm', 'AdminController::add-kpm');
-    $routes->get('/edit-kpm/(:segment)', 'AdminController::edit-kpm/$1');
-    $routes->post('/update-kpm/(:segment)', 'AdminController::update-kpm/$1');
-    $routes->get('/delete-kpm/(:segment)', 'AdminController::delete-kpm/$1');
+
 });
 
 $routes->group('admin/ag', function ($routes) {

@@ -17,6 +17,8 @@
     <link href="<?= base_url('assetss/extra-libs/jvector/jquery-jvectormap-2.0.2.css') ?>" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="<?= base_url('dist/css/style.min.css') ?>" rel="stylesheet">
+    <!-- CDN Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 </head>
 
@@ -194,7 +196,7 @@
             <!-- End Sidebar scroll-->
         </aside>
         <div class="page-wrapper">
-            <div class="page-breadcrumb">
+            <!-- <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 align-self-center">
                         <h5 class="page-title text-dark font-weight-medium mb-1">Selamat Datang di Delapan Delapan Logistic</h5>
@@ -208,7 +210,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <?= $this->renderSection('content') ?>
         </div>
     </div>
