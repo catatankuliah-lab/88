@@ -4,25 +4,24 @@
     <div class="row">
         <div class="col-md-12 col-lg-12">
             <div class="card-body">
-                <h4 class="card-title">List Customer</h4>
+                <h4 class="card-title">List Pegawai</h4>
                 <h6 class="card-subtitle">
-                    Terimakasih, Pelanggan Terbaik!
+                    Klik <a style="font-weight: bolder;" href="<?= base_url('owner/kasir/create') ?>">disini</a> untuk menambahkan data karyawan (kasir dan admin)
                 </h6>
                 <div class="table-responsive mt-5 h6">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th style="width: 10px;" scope="col" class="font-weight-bold">No</th>
-                                <th scope="col" class="font-weight-bold">Nama Lengkap</th>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama Lengkap</th>
+                                <th scope="col" style="width: 10%;">Detail</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>
-                                    <p class="font-weight-bold">Nama Lengkap</p>
-                                    <p class="text-muted">Alamat dan Nomor Telpon</p>
-                                </td>
+                                <td>Mark</td>
+                                <td><a href="">Detail</a></td>
                             </tr>
                         </tbody>
                     </table>

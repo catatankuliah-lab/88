@@ -122,17 +122,17 @@
                     <ul id="sidebarnav">
                         <li class="nav-small-cap mt-3"><span class="hide-menu">Dashboard</span></li>
                         <li class="sidebar-item <?= $menu1 ?>">
-                            <a class="sidebar-link sidebar-link" href="<?= base_url('admin') ?>" aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a>
+                            <a class="sidebar-link" onclick="dashboard()" aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
                         <li class="nav-small-cap mt-2"><span class="hide-menu">Penerima Manfaat</span></li>
                         <li class="sidebar-item <?= $menu2 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/kpm') ?>" aria-expanded="false"><i data-feather="users" class="feather-icon"></i><span class="hide-menu">Data KPM
+                            <a class="sidebar-link" onclick="kpm()" aria-expanded="false"><i data-feather="users" class="feather-icon"></i><span class="hide-menu">Data KPM
                                 </span>
                             </a>
                         </li>
                         <li class="nav-small-cap mt-2"><span class="hide-menu">User</span></li>
                         <li class="sidebar-item <?= $menu3 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/ag') ?>" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Gudang
+                            <a class="sidebar-link" onclick="ag()" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Gudang
                                 </span>
                             </a>
                         </li>
