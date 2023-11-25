@@ -9,9 +9,9 @@ class AdminController extends BaseController
     {
         $data = [
             'halaman' => 'Dashboard',
-            'menu1' => '',
+            'menu1' => 'selected',
             'menu2' => '',
-            'menu3' => 'selected',
+            'menu3' => '',
             'menu4' => '',
             'menu5' => '',
             'menu6' => '',

@@ -137,53 +137,53 @@
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu4 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/ak') ?>" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Kecamatan
+                            <a class="sidebar-link" onclick="ak()" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Kecamatan
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu5 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/ad') ?>" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Desa
+                            <a class="sidebar-link" onclick="ad()" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Desa
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu6 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/tp') ?>" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Team Peyalur
+                            <a class="sidebar-link" onclick="tp()" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Team Peyalur
                                 </span>
                             </a>
                         </li>
                         <li class="nav-small-cap mt-2"><span class="hide-menu">Dokumen</span></li>
                         <li class="sidebar-item <?= $menu7 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/so') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SO
+                            <a class="sidebar-link" onclick="so()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SO
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu8 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/do') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">DO
+                            <a class="sidebar-link" onclick="doo()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">DO
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu9 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/spm') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SPM
+                            <a class="sidebar-link" onclick="spm()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SPM
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu10 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/ba') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Berita Acara
+                            <a class="sidebar-link" onclick="ba()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Berita Acara
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu11 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/sj') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Surat Jalan
+                            <a class="sidebar-link" onclick="sj()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Surat Jalan
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu12 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/tt') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Tanda Terima PBP
+                            <a class="sidebar-link" onclick="tt()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Tanda Terima PBP
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu13 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/sptjm') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SPTJM
+                            <a class="sidebar-link" onclick="sptjm()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SPTJM
                                 </span>
                             </a>
                         </li>
