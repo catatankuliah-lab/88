@@ -15,10 +15,34 @@
     <link href="<?= base_url('assetss/extra-libs/c3/c3.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assetss/libs/chartist/dist/chartist.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assetss/extra-libs/jvector/jquery-jvectormap-2.0.2.css') ?>" rel="stylesheet" />
+    <link href="<?= base_url('assetss/libs/fullcalendar/dist/fullcalendar.min.css') ?>" rel="stylesheet" />
     <!-- Custom CSS -->
+    <script src="<?= base_url('assetss/libs/jquery/dist/jquery.min.js') ?>"></script>
+
     <link href="<?= base_url('dist/css/style.min.css') ?>" rel="stylesheet">
     <!-- CDN Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="manifest" href="<?= base_url('assets/js/web.webmanifest') ?>" />
+    <style>
+        .gapake {
+            border: none !important;
+            opacity: 0.5 !important;
+            color: grey !important;
+            font-size: 14px !important;
+        }
+
+        div.dataTables_wrapper div.dataTables_filter input {
+            display: none !important;
+        }
+    </style>
 
 </head>
 
@@ -83,7 +107,7 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
                         <li class="nav-item d-none d-md-block">
-                            <span class="text-dark">Dashboard</span>
+                            <span class="text-dark"><?= $halaman ?></span>
                         </li>
                     </ul>
                     <!-- ============================================================== -->
@@ -95,7 +119,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="ml-2"><span>Hello,</span> <span class="text-dark">Bapak Admin</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
+                                <span class="ml-2"><span>Hello,</span> <span class="text-dark">Bapak Nana</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
                                 <img src="<?= base_url('assetss/images/users/profile-pic.jpg') ?>" alt="user" class="rounded-circle" width="40">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
@@ -139,53 +163,53 @@
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu4 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/ak') ?>" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Kecamatan
+                            <a class="sidebar-link" onclick="ak()" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Kecamatan
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu5 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/ad') ?>" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Desa
+                            <a class="sidebar-link" onclick="ad()" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Admin Desa
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu6 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/tp') ?>" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Team Peyalur
+                            <a class="sidebar-link" onclick="tp()" aria-expanded="false"><i data-feather="user" class="feather-icon"></i><span class="hide-menu">Team Peyalur
                                 </span>
                             </a>
                         </li>
                         <li class="nav-small-cap mt-2"><span class="hide-menu">Dokumen</span></li>
                         <li class="sidebar-item <?= $menu7 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/so') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SO
+                            <a class="sidebar-link" onclick="so()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SO
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu8 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/do') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">DO
+                            <a class="sidebar-link" onclick="doo()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">DO
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu9 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/spm') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SPM
+                            <a class="sidebar-link" onclick="spm()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SPM
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu10 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/ba') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Berita Acara
+                            <a class="sidebar-link" onclick="ba()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Berita Acara
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu11 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/sj') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Surat Jalan
+                            <a class="sidebar-link" onclick="sj()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Surat Jalan
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu12 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/tt') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Tanda Terima PBP
+                            <a class="sidebar-link" onclick="tt()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Tanda Terima PBP
                                 </span>
                             </a>
                         </li>
                         <li class="sidebar-item <?= $menu13 ?>">
-                            <a class="sidebar-link" href="<?= base_url('admin/sptjm') ?>" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SPTJM
+                            <a class="sidebar-link" onclick="sptjm()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">SPTJM
                                 </span>
                             </a>
                         </li>
@@ -229,7 +253,53 @@
     <script src="<?= base_url('assetss/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js') ?>"></script>
     <script src="<?= base_url('assetss/extra-libs/jvector/jquery-jvectormap-world-mill-en.js') ?>"></script>
     <script src="<?= base_url('dist/js/pages/dashboards/dashboard1.min.js') ?>"></script>
+    <script>
+        new DataTable('#example', {
+            initComplete: function() {
+                this.api()
+                    .columns()
+                    .every(function() {
+                        let column = this;
+                        let title = column.footer().textContent;
 
+                        // Create input element
+                        let input = document.createElement('input');
+                        input.placeholder = title;
+                        input.classList = 'gapake mb-5';
+                        column.footer().replaceChildren(input);
+
+                        // Event listener for user input
+                        input.addEventListener('keyup', () => {
+                            if (column.search() !== this.value) {
+                                column.search(input.value).draw();
+                            }
+                        });
+                    });
+            },
+            info: false,
+            ordering: true,
+            paging: false,
+            searching: true,
+            language: {
+                search: "",
+                search: "_INPUT_",
+                searchPlaceholder: ""
+            },
+        });
+    </script>
+    <script>
+        function dashboard() {
+            window.location.href = "<?= base_url('admin') ?>"
+        }
+
+        function kpm() {
+            window.location.href = "<?= base_url('admin/kpm') ?>"
+        }
+
+        function ag() {
+            window.location.href = "<?= base_url('admin/ag') ?>"
+        }
+    </script>
 </body>
 
 </html>
