@@ -8,24 +8,20 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->group('admin', function ($routes) {
     $routes->get('/', 'AdminController::index');
-});
-
-$routes->group('admin/kpm', function ($routes) {
-    $routes->get('/', 'AdminController::index-kpm');
-    $routes->get('/create-kpm', 'AdminController::create-kpm');
-    $routes->post('/add-kpm', 'AdminController::add-kpm');
-    $routes->get('/edit-kpm/(:segment)', 'AdminController::edit-kpm/$1');
-    $routes->post('/update-kpm/(:segment)', 'AdminController::update-kpm/$1');
-    $routes->get('/delete-kpm/(:segment)', 'AdminController::delete-kpm/$1');
-});
-
-$routes->group('admin/ag', function ($routes) {
-    $routes->get('/', 'AdminController::index-ag');
-    $routes->get('/create-ag', 'AdminController::create-ag');
-    $routes->post('/add-ag', 'AdminController::add-ag');
-    $routes->get('/edit-ag/(:segment)', 'AdminController::edit-ag/$1');
-    $routes->post('/update-ag/(:segment)', 'AdminController::update-ag/$1');
-    $routes->get('/delete-ag/(:segment)', 'AdminController::delete-ag/$1');
+    // KPM
+    $routes->get('kpm', 'AdminController::index_kpm');
+    $routes->get('kpm/create', 'AdminController::create_kpm');
+    $routes->post('kpm/add', 'AdminController::add_kpm');
+    $routes->get('kpm/detail/(:segment)', 'AdminController::detail_kpm/$1');
+    $routes->post('kpm/update/(:segment)', 'AdminController::update_kpm/$1');
+    $routes->get('kpm/delete/(:segment)', 'AdminController::delete_kpm/$1');
+    // Admin Gudang
+    $routes->get('ag', 'AdminController::index_ag');
+    $routes->get('ag/create', 'AdminController::create_ag');
+    $routes->post('ag/add', 'AdminController::add_ag');
+    $routes->get('ag/detail/(:segment)', 'AdminController::detail_ag/$1');
+    $routes->post('ag/update/(:segment)', 'AdminController::update_ag/$1');
+    $routes->get('ag/delete/(:segment)', 'AdminController::delete_ag/$1');
 });
 
 $routes->group('admin/ak', function ($routes) {

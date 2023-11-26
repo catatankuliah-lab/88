@@ -15,8 +15,32 @@
     <link href="<?= base_url('assetss/extra-libs/c3/c3.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assetss/libs/chartist/dist/chartist.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assetss/extra-libs/jvector/jquery-jvectormap-2.0.2.css') ?>" rel="stylesheet" />
+    <link href="<?= base_url('assetss/libs/fullcalendar/dist/fullcalendar.min.css') ?>" rel="stylesheet" />
     <!-- Custom CSS -->
+    <script src="<?= base_url('assetss/libs/jquery/dist/jquery.min.js') ?>"></script>
+
     <link href="<?= base_url('dist/css/style.min.css') ?>" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="manifest" href="<?= base_url('assets/js/web.webmanifest') ?>" />
+    <style>
+        .gapake {
+            border: none !important;
+            opacity: 0.5 !important;
+            color: grey !important;
+            font-size: 14px !important;
+        }
+
+        div.dataTables_wrapper div.dataTables_filter input {
+            display: none !important;
+        }
+    </style>
 
 </head>
 
@@ -81,7 +105,7 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
                         <li class="nav-item d-none d-md-block">
-                            <span class="text-dark">Dashboard</span>
+                            <span class="text-dark"><?= $halaman ?></span>
                         </li>
                     </ul>
                     <!-- ============================================================== -->
@@ -93,7 +117,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="ml-2"><span>Hello,</span> <span class="text-dark">Bapak Admin</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
+                                <span class="ml-2"><span>Hello,</span> <span class="text-dark">Bapak Nana</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
                                 <img src="<?= base_url('assetss/images/users/profile-pic.jpg') ?>" alt="user" class="rounded-circle" width="40">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
@@ -194,7 +218,7 @@
             <!-- End Sidebar scroll-->
         </aside>
         <div class="page-wrapper">
-            <div class="page-breadcrumb">
+            <!-- <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 align-self-center">
                         <h5 class="page-title text-dark font-weight-medium mb-1">Selamat Datang di Delapan Delapan Logistic</h5>
@@ -208,7 +232,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <?= $this->renderSection('content') ?>
         </div>
     </div>
@@ -227,7 +251,53 @@
     <script src="<?= base_url('assetss/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js') ?>"></script>
     <script src="<?= base_url('assetss/extra-libs/jvector/jquery-jvectormap-world-mill-en.js') ?>"></script>
     <script src="<?= base_url('dist/js/pages/dashboards/dashboard1.min.js') ?>"></script>
+    <script>
+        new DataTable('#example', {
+            initComplete: function() {
+                this.api()
+                    .columns()
+                    .every(function() {
+                        let column = this;
+                        let title = column.footer().textContent;
 
+                        // Create input element
+                        let input = document.createElement('input');
+                        input.placeholder = title;
+                        input.classList = 'gapake mb-5';
+                        column.footer().replaceChildren(input);
+
+                        // Event listener for user input
+                        input.addEventListener('keyup', () => {
+                            if (column.search() !== this.value) {
+                                column.search(input.value).draw();
+                            }
+                        });
+                    });
+            },
+            info: false,
+            ordering: true,
+            paging: false,
+            searching: true,
+            language: {
+                search: "",
+                search: "_INPUT_",
+                searchPlaceholder: ""
+            },
+        });
+    </script>
+    <script>
+        function dashboard() {
+            window.location.href = "<?= base_url('admin') ?>"
+        }
+
+        function kpm() {
+            window.location.href = "<?= base_url('admin/kpm') ?>"
+        }
+
+        function ag() {
+            window.location.href = "<?= base_url('admin/ag') ?>"
+        }
+    </script>
 </body>
 
 </html>
