@@ -1,6 +1,5 @@
 <?php $this->extend('admin/layout') ?>
 <?php $this->section('content') ?>
-<<<<<<< HEAD
 
     <div class="row p-2">
         <div class="col-md-12 col-lg-12">
@@ -27,7 +26,6 @@
                         </tbody>
                     </table>
                 </div>
-=======
 <div class="row">
     <div class="col-md-12 col-lg-12">
         <div class="card-body">
@@ -73,7 +71,6 @@
                         </tr>
                     </tfoot>
                 </table>
->>>>>>> 946f3d6218412e37aa010666974d1061c27a7a58
             </div>
         </div>
     </div>

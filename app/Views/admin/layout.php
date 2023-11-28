@@ -299,6 +299,10 @@
         function ag() {
             window.location.href = "<?= base_url('admin/ag') ?>"
         }
+
+        function ak(){
+            window.location.href = "<?= base_url('admin/ak') ?>"
+        }
     </script>
 </body>
 

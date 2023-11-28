@@ -69,6 +69,27 @@ class AdminController extends BaseController
         return view('admin/kpm/detail', $data);
     }
 
+    public function create_kpm()
+    {
+        $data = [
+            'halaman' => 'Dashboard',
+            'menu1' => '',
+            'menu2' => 'selected',
+            'menu3' => '',
+            'menu4' => '',
+            'menu5' => '',
+            'menu6' => '',
+            'menu7' => '',
+            'menu8' => '',
+            'menu9' => '',
+            'menu10' => '',
+            'menu11' => '',
+            'menu12' => '',
+            'menu13' => '',
+        ];
+        return view('admin/kpm/create', $data);
+    }   
+
     public function index_ag()
     {
         $modelAG = new AdminGudang();
@@ -89,7 +110,7 @@ class AdminController extends BaseController
             'menu13' => '',
             'dataAG' => $modelAG->getAllAdminGudang()
         ];
-        return view('admin/admingudang/index', $data);
+        return view('admin/ag/', $data);
     }
 
     public function create_ag()
@@ -113,14 +134,13 @@ class AdminController extends BaseController
         return view('admin/admingudang/create', $data);
     }
 
-    public function index_kpm()
-    {
+    public function index_ak(){
         $data = [
-            'halaman' => 'Dashboard',
+            'halaman' => 'Admin Kecamatan',
             'menu1' => '',
-            'menu2' => 'selected',
+            'menu2' => '',
             'menu3' => '',
-            'menu4' => '',
+            'menu4' => 'selected',
             'menu5' => '',
             'menu6' => '',
             'menu7' => '',
@@ -131,16 +151,16 @@ class AdminController extends BaseController
             'menu12' => '',
             'menu13' => '',
         ];
-        return view('admin/kpm/index', $data);
+        return view('admin/adminkecamatan/index', $data);
     }
 
-    public function create_kpm()
-    {
+    public function create_ak()
+    {   
         $data = [
-            'halaman' => 'Dashboard',
+            'halaman' => 'Admin Gudang',
             'menu1' => '',
-            'menu2' => 'selected',
-            'menu3' => '',
+            'menu2' => '',
+            'menu3' => 'selected',
             'menu4' => '',
             'menu5' => '',
             'menu6' => '',
@@ -152,7 +172,8 @@ class AdminController extends BaseController
             'menu12' => '',
             'menu13' => '',
         ];
-        return view('admin/kpm/create', $data);
+        return view('admin/adminkecamatan/create', $data);
     }
+
 }
 ?>
