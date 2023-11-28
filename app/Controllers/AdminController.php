@@ -232,6 +232,14 @@ class AdminController extends BaseController
         return redirect()->to('/admin/ak/');
 
     }
+    public function delete_ak($id)
+    {
+        $modelAK = new AdminKecamatan();
+        $modelAK->delete($id);
+        return redirect()->to('/admin/ak/');        
+    }
+
+
     /** ================================================================================= */
     /** ============================ End Admin Kecamatan ================================ */
     /** ================================================================================= */

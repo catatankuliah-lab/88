@@ -30,7 +30,7 @@ $routes->group('admin', function ($routes) {
     $routes->post('ak/add-ak', 'AdminController::add_ak');
     $routes->get('ak/edit-ak/(:segment)', 'AdminController::edit_ak/$1');
     $routes->post('ak/update-ak/(:segment)', 'AdminController::update_ak/$1');
-    $routes->get('ak/delete-ak/(:segment)', 'AdminController::delete-ak/$1');
+    $routes->delete('ak/delete-ak/(:segment)', 'AdminController::delete_ak/$1');
 
     // Routes Admin Desa //
     $routes->get('ad/', 'AdminController::index-ad');

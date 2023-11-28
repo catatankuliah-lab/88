@@ -38,9 +38,55 @@
                 <div class="col-12 mt-3">
                     <button type="submit" style="height: 50px !important; font-size: 14px;" class="btn waves-effect custom-shadow waves-light btn-rounded btn-primary w-100">Simpan Data</button>
                 </div>
-            </form>
+                <div class="col-12 mt-3">
+                    <button type="button" style="height: 50px !important; font-size: 14px;" class="btn waves-effect custom-shadow waves-light btn-rounded btn-danger w-100" data-toggle="modal" data-target="#confirmDeleteModal">Hapus Data</button>
+                </div>
 
+                <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="confirmDeleteModalLabel">Konfirmasi Hapus Data</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Apakah Anda yakin ingin menghapus data ini?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                <button type="submit" class="btn btn-danger" onclick="deleteData()">Ya, Hapus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
+<script>
+    function deleteData() {
+        $.ajax({
+            url: '<?= base_url('admin/ak/delete-ak/' . $dataAK->id_admin_kecamatan) ?>',
+            type: 'POST',
+            data: {
+                _method: 'DELETE'
+            },
+            success: function(response) {
+                if (response.status === 'success') {
+                    $('#confirmDeleteModal').modal('hide');
+                    location.reload();
+                } else {
+                    console.error('Error:', response);
+                }
+            },
+            error: function(error) {
+                console.error('Error:', error);
+            }
+        });
+    }
+</script>
+
 <?php $this->endSection() ?>
