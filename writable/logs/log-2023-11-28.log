@@ -1,0 +1,241 @@
+ERROR - 2023-11-28 17:01:02 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), '88', 3306, '', 0)
+#1 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingu...', Array, false)
+#4 D:\Proyek\Logistic 88\88\app\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Proyek\Logistic 88\88\app\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+#6 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+#7 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Proyek\Logistic 88\88\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logis...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingu...', Array, false)
+#3 D:\Proyek\Logistic 88\88\app\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Proyek\Logistic 88\88\app\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+#5 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+#6 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyek\Logistic 88\88\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logis...')
+#10 {main}
+CRITICAL - 2023-11-28 17:01:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingudang`.*, `user`.*
+FROM `admingudang`
+LEFT JOIN `user` ON `user`.`id_user` = `admingudang`.`id_user`', [], false)
+ 3 APPPATH\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+ERROR - 2023-11-28 17:01:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), '88', 3306, '', 0)
+#1 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingu...', Array, false)
+#4 D:\Proyek\Logistic 88\88\app\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Proyek\Logistic 88\88\app\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+#6 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+#7 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Proyek\Logistic 88\88\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logis...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingu...', Array, false)
+#3 D:\Proyek\Logistic 88\88\app\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Proyek\Logistic 88\88\app\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+#5 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+#6 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyek\Logistic 88\88\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logis...')
+#10 {main}
+CRITICAL - 2023-11-28 17:01:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingudang`.*, `user`.*
+FROM `admingudang`
+LEFT JOIN `user` ON `user`.`id_user` = `admingudang`.`id_user`', [], false)
+ 3 APPPATH\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+ERROR - 2023-11-28 17:02:30 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'logistic-88', 3306, '', 0)
+#1 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingu...', Array, false)
+#4 D:\Proyek\Logistic 88\88\app\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Proyek\Logistic 88\88\app\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+#6 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+#7 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#8 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Proyek\Logistic 88\88\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logis...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingu...', Array, false)
+#3 D:\Proyek\Logistic 88\88\app\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Proyek\Logistic 88\88\app\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+#5 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+#6 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#7 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Proyek\Logistic 88\88\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 D:\Proyek\Logistic 88\88\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logis...')
+#10 {main}
+CRITICAL - 2023-11-28 17:02:30 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `admingudang`.*, `user`.*
+FROM `admingudang`
+LEFT JOIN `user` ON `user`.`id_user` = `admingudang`.`id_user`', [], false)
+ 3 APPPATH\Models\AdminGudang.php(21): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\AdminController.php(111): App\Models\AdminGudang->getAllAdminGudang()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 17:03:08 --> Invalid file: "admin/ag/.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/ag/.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/ag/', [], true)
+ 3 APPPATH\Controllers\AdminController.php(113): view('admin/ag/', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->index_ag()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 17:08:47 --> Undefined property: stdClass::$nama_dan_lokasi_kecamatan
+in APPPATH\Views\admin\adminkecamatan\index.php on line 28.
+ 1 APPPATH\Views\admin\adminkecamatan\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_dan_lokasi_kecamatan', 'D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/adminkecamatan/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(158): view('admin/adminkecamatan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->index_ak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 17:08:53 --> Undefined property: stdClass::$nama_dan_lokasi_kecamatan
+in APPPATH\Views\admin\adminkecamatan\index.php on line 28.
+ 1 APPPATH\Views\admin\adminkecamatan\index.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_dan_lokasi_kecamatan', 'D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\index.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/adminkecamatan/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(158): view('admin/adminkecamatan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->index_ak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 18:19:13 --> Invalid file: "edit_ak_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edit_ak_view.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('edit_ak_view', [], true)
+ 3 APPPATH\Controllers\AdminController.php(204): view('edit_ak_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->edit_ak('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 18:20:00 --> Undefined property: stdClass::$id
+in APPPATH\Views\admin\adminkecamatan\detail.php on line 7.
+ 1 APPPATH\Views\admin\adminkecamatan\detail.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\detail.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\detail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/adminkecamatan/detail', [], true)
+ 5 APPPATH\Controllers\AdminController.php(204): view('admin/adminkecamatan/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->edit_ak('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 18:20:58 --> Undefined variable $halaman
+in APPPATH\Views\admin\layout.php on line 110.
+ 1 APPPATH\Views\admin\layout.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $halaman', 'D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\layout.php', 110)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('admin/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/adminkecamatan/detail', [], true)
+ 6 APPPATH\Controllers\AdminController.php(204): view('admin/adminkecamatan/detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->edit_ak('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 18:22:37 --> Attempt to read property "nik_admin_kecamatan" on array
+in APPPATH\Views\admin\adminkecamatan\detail.php on line 17.
+ 1 APPPATH\Views\admin\adminkecamatan\detail.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nik_admin_kecamatan" on array', 'D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\detail.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\detail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/adminkecamatan/detail', [], true)
+ 5 APPPATH\Controllers\AdminController.php(207): view('admin/adminkecamatan/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->edit_ak('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 18:39:16 --> Undefined array key "nik_admin_kecamatan"
+in APPPATH\Views\admin\adminkecamatan\detail.php on line 16.
+ 1 APPPATH\Views\admin\adminkecamatan\detail.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik_admin_kecamatan"', 'D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\detail.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\Proyek\\Logistic 88\\88\\app\\Views\\admin\\adminkecamatan\\detail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/adminkecamatan/detail', [], true)
+ 5 APPPATH\Controllers\AdminController.php(219): view('admin/adminkecamatan/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->edit_ak('$1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 19:14:41 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\adminkecamatan\detail.php on line 16.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('admin/adminkecamatan/detail', [], true)
+ 4 APPPATH\Controllers\AdminController.php(219): view('admin/adminkecamatan/detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->edit_ak('1')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')
+CRITICAL - 2023-11-28 19:20:31 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1726.
+ 1 SYSTEMPATH\BaseModel.php(1726): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\AdminController.php(231): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->update_ak('4')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Proyek\\Logistic 88\\88\\public\\index.php')

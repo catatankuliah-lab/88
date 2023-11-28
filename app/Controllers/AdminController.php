@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\AdminGudang;
+use App\Models\AdminKecamatan;
 
 class AdminController extends BaseController
 {
@@ -110,7 +111,7 @@ class AdminController extends BaseController
             'menu13' => '',
             'dataAG' => $modelAG->getAllAdminGudang()
         ];
-        return view('admin/ag/', $data);
+        return view('admin/admingudang/index', $data);
     }
 
     public function create_ag()
@@ -134,7 +135,35 @@ class AdminController extends BaseController
         return view('admin/admingudang/create', $data);
     }
 
+    /** ================================================================================= */
+    /** ================================ Admin Kecamatan ================================ */
+    /** ================================================================================= */
+
     public function index_ak(){
+
+        $modelAK = new AdminKecamatan();
+        $data = [
+            'halaman' => 'Admin Kecamatan',
+            'menu1' => '',
+            'menu2' => '',
+            'menu3' => '',
+            'menu4' => 'selected',
+            'menu5' => '',
+            'menu6' => '',
+            'menu7' => '',
+            'menu8' => '',
+            'menu9' => '',
+            'menu10' => '',
+            'menu11' => '',
+            'menu12' => '',
+            'menu13' => '',
+            'dataAK' => $modelAK->getAllAdminKecamatn()
+        ];
+        return view('admin/adminkecamatan/index', $data);
+    }
+
+    public function create_ak()
+    {   
         $data = [
             'halaman' => 'Admin Kecamatan',
             'menu1' => '',
@@ -151,17 +180,31 @@ class AdminController extends BaseController
             'menu12' => '',
             'menu13' => '',
         ];
-        return view('admin/adminkecamatan/index', $data);
+        return view('admin/adminkecamatan/create', $data);
     }
 
-    public function create_ak()
-    {   
+    public function add_ak()
+    {
+        $modelAK = new AdminKecamatan();
+
         $data = [
-            'halaman' => 'Admin Gudang',
+            'nik_admin_kecamatan' => $this->request->getPost('nik_admin_kecamatan'),
+            'nama_admin_kecamatan' => $this->request->getPost('nama_admin_kecamatan'),
+            'nama_kecamatan' => $this->request->getPost('nama_kecamatan'),
+        ];
+        $modelAK->insert($data);
+        return redirect()->to('/admin/ak/');
+    }   
+
+    public function edit_ak($id)
+    {
+        $modelAK = new AdminKecamatan();
+        $data = [
+            'halaman' => 'Admin Kecamatan',
             'menu1' => '',
             'menu2' => '',
-            'menu3' => 'selected',
-            'menu4' => '',
+            'menu3' => '',
+            'menu4' => 'selected',
             'menu5' => '',
             'menu6' => '',
             'menu7' => '',
@@ -171,9 +214,27 @@ class AdminController extends BaseController
             'menu11' => '',
             'menu12' => '',
             'menu13' => '',
+            'dataAK' => $modelAK->find($id)
         ];
-        return view('admin/adminkecamatan/create', $data);
+        return view('admin/adminkecamatan/detail', $data);   
     }
+
+    public function update_ak($id)
+    {
+        $modelAK = new AdminKecamatan();
+        $data = [
+            'id_admin_kecamatan' => $id,
+            'nik_admin_kecamatan' => $this->request->getPost('nik_admin_kecamatan'),
+            'nama_admin_kecamatan' => $this->request->getPost('nama_admin_kecamatan'),
+            'nama_kecamatan' => $this->request->getPost('nama_kecamatan'),
+        ];
+        $modelAK->update($id, $data);
+        return redirect()->to('/admin/ak/');
+
+    }
+    /** ================================================================================= */
+    /** ============================ End Admin Kecamatan ================================ */
+    /** ================================================================================= */
 
 }
 ?>

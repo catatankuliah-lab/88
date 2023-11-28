@@ -13,12 +13,24 @@
                         <tr>
                             <th scope="col">NIK</th>
                             <th scope="col">Nama Lengkap</th>
-                            <th scope="col">Nama dan Lokasi Gudang</th>
+                            <th scope="col">Nama Kecamatan</th>
                             <th scope="col" class="text-center">Detail</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- Foreeach -->
+                        <?php
+                        foreach ($dataAK as $data) :
+                        ?>
+                            <tr>
+                                <td><?= $data->nik_admin_kecamatan ?></td>
+                                <td><?= $data->nama_admin_kecamatan ?></td>
+                                <td><?= $data->nama_kecamatan ?></td>
+                                <td class="text-center"><a href="<?= base_url('admin/ak/edit-ak/' . $data->id_admin_kecamatan) ?>"><i class="fas fa-search-plus"></i></a></td>
+                            </tr>
+                        <?php
+                        endforeach
+                        ?>
                     </tbody>
                     <tfoot>
                         <tr>
