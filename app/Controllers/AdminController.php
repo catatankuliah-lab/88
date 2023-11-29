@@ -3,7 +3,11 @@
 namespace App\Controllers;
 
 use App\Models\AdminGudang;
+<<<<<<< HEAD
 use App\Models\AdminKecamatan;
+=======
+use App\Models\KPMModel;
+>>>>>>> e92c19345d00c70e9abf7ef14d543ae21432d69b
 
 class AdminController extends BaseController
 {
@@ -30,6 +34,7 @@ class AdminController extends BaseController
 
     public function index_kpm()
     {
+        $modelKPM = new KPMModel();
         $data = [
             'halaman' => 'Data KPM',
             'menu1' => '',
@@ -45,12 +50,14 @@ class AdminController extends BaseController
             'menu11' => '',
             'menu12' => '',
             'menu13' => '',
+            'datakpm' => $modelKPM->findAll()
         ];
         return view('admin/kpm/index', $data);
     }
 
-    public function detail_kpm()
+    public function detail_kpm($id)
     {
+        $modelKPM = new KPMModel();
         $data = [
             'halaman' => 'Data KPM',
             'menu1' => '',
@@ -66,6 +73,7 @@ class AdminController extends BaseController
             'menu11' => '',
             'menu12' => '',
             'menu13' => '',
+            'datakpm' => $modelKPM->find($id)
         ];
         return view('admin/kpm/detail', $data);
     }
