@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\AdminGudang;
-use App\Models\KPMModel;
 
 class AdminGudangController extends BaseController
 {
@@ -28,9 +27,8 @@ class AdminGudangController extends BaseController
         return view('admingudang/beritaacara/index', $data);
     }
 
-    public function index_kpm()
+    public function index_beritaacara()
     {
-        $modelKPM = new KPMModel();
         $data = [
             'halaman' => 'Data KPM',
             'menu1' => '',
@@ -46,14 +44,33 @@ class AdminGudangController extends BaseController
             'menu11' => '',
             'menu12' => '',
             'menu13' => '',
-            'datakpm' => $modelKPM->findAll()
         ];
-        return view('admin/kpm/index', $data);
+        return view('admingudang/beritaacara/index', $data);
+    }
+
+    public function create_beritaacara()
+    {
+        $data = [
+            'halaman' => 'Data KPM',
+            'menu1' => '',
+            'menu2' => 'selected',
+            'menu3' => '',
+            'menu4' => '',
+            'menu5' => '',
+            'menu6' => '',
+            'menu7' => '',
+            'menu8' => '',
+            'menu9' => '',
+            'menu10' => '',
+            'menu11' => '',
+            'menu12' => '',
+            'menu13' => '',
+        ];
+        return view('admingudang/beritaacara/create', $data);
     }
 
     public function detail_kpm($id)
     {
-        $modelKPM = new KPMModel();
         $data = [
             'halaman' => 'Data KPM',
             'menu1' => '',
@@ -69,7 +86,6 @@ class AdminGudangController extends BaseController
             'menu11' => '',
             'menu12' => '',
             'menu13' => '',
-            'datakpm' => $modelKPM->find($id)
         ];
         return view('admin/kpm/detail', $data);
     }
