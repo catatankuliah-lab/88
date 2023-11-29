@@ -17,22 +17,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>123123123123123</td>
-                            <td>Nama Lengkap KPM 1</td>
-                            <td>Desa KPM 1</td>
-                            <td>Kecamatan KPM 1</td>
-                            <td>Kabupaten KPM 1</td>
-                            <td class="text-center"><a href=""><i class="fas fa-search-plus"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>123123123123123</td>
-                            <td>Nama Lengkap KPM 1</td>
-                            <td>Desa KPM 1</td>
-                            <td>Kecamatan KPM 1</td>
-                            <td>Kabupaten KPM 1</td>
-                            <td class="text-center"><a href=""><i class="fas fa-search-plus"></i></a></td>
-                        </tr>
+                        <?php
+                        foreach ($datakpm as $data) :
+                        ?>
+                            <tr>
+                                <td><?= $data->nomor_cekpos ?></td>
+                                <td><?= $data->nama_penerima ?></td>
+                                <td><?= $data->kelurahan ?></td>
+                                <td><?= $data->kecamatan ?></td>
+                                <td><?= $data->kota_kabupaten ?></td>
+                                <td class="text-center"><a href="<?= base_url('admin/kpm/detail/' . $data->id_kpm) ?>"><i class="fas fa-search-plus"></i></a></td>
+                            </tr>
+                        <?php
+                        endforeach
+                        ?>
                     </tbody>
                     <tfoot>
                         <tr>

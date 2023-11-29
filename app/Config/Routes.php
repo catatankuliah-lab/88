@@ -11,7 +11,6 @@ $routes->group('admin', function ($routes) {
     // KPM
     $routes->get('kpm', 'AdminController::index_kpm');
     $routes->get('kpm/create', 'AdminController::create_kpm');
-    $routes->post('kpm/add', 'AdminController::add_kpm');
     $routes->get('kpm/detail/(:segment)', 'AdminController::detail_kpm/$1');
     $routes->post('kpm/update/(:segment)', 'AdminController::update_kpm/$1');
     $routes->get('kpm/delete/(:segment)', 'AdminController::delete_kpm/$1');
@@ -22,6 +21,23 @@ $routes->group('admin', function ($routes) {
     $routes->get('ag/detail/(:segment)', 'AdminController::detail_ag/$1');
     $routes->post('ag/update/(:segment)', 'AdminController::update_ag/$1');
     $routes->get('ag/delete/(:segment)', 'AdminController::delete_ag/$1');
+});
+
+$routes->group('admingudang', function ($routes) {
+    $routes->get('/', 'AdminGudangController::index');
+    // KPM
+    $routes->get('kpm', 'AdminGudangController::index_kpm');
+    $routes->get('kpm/create', 'AdminGudangController::create_kpm');
+    $routes->get('kpm/detail/(:segment)', 'AdminGudangController::detail_kpm/$1');
+    $routes->post('kpm/update/(:segment)', 'AdminGudangController::update_kpm/$1');
+    $routes->get('kpm/delete/(:segment)', 'AdminGudangController::delete_kpm/$1');
+    // Admin Gudang
+    $routes->get('ag', 'AdminGudangController::index_ag');
+    $routes->get('ag/create', 'AdminGudangController::create_ag');
+    $routes->post('ag/add', 'AdminGudangController::add_ag');
+    $routes->get('ag/detail/(:segment)', 'AdminGudangController::detail_ag/$1');
+    $routes->post('ag/update/(:segment)', 'AdminGudangController::update_ag/$1');
+    $routes->get('ag/delete/(:segment)', 'AdminGudangController::delete_ag/$1');
 });
 
 $routes->group('admin/ak', function ($routes) {
