@@ -25,6 +25,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
     <link href="<?= base_url('dist/css/style.min.css') ?>" rel="stylesheet">
 
     <meta name="theme-color" content="#FFFFFF" />
@@ -149,13 +151,13 @@
                             <a class="sidebar-link" onclick="dashboard()" aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
                         <li class="nav-small-cap mt-2"><span class="hide-menu">Dokumen</span></li>
-                        <li class="sidebar-item <?= $menu7 ?>">
-                            <a class="sidebar-link" onclick="so()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Berita Acara
+                        <li class="sidebar-item <?= $menu2 ?>">
+                            <a class="sidebar-link" onclick="beritaacara()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Berita Acara
                                 </span>
                             </a>
                         </li>
-                        <li class="sidebar-item <?= $menu8 ?>">
-                            <a class="sidebar-link" onclick="doo()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Surat Jalan
+                        <li class="sidebar-item <?= $menu3 ?>">
+                            <a class="sidebar-link" onclick="suratjalan()" aria-expanded="false"><i data-feather="file" class="feather-icon"></i><span class="hide-menu">Surat Jalan
                                 </span>
                             </a>
                         </li>
@@ -166,21 +168,6 @@
             <!-- End Sidebar scroll-->
         </aside>
         <div class="page-wrapper">
-            <!-- <div class="page-breadcrumb">
-                <div class="row">
-                    <div class="col-12 align-self-center">
-                        <h5 class="page-title text-dark font-weight-medium mb-1">Selamat Datang di Delapan Delapan Logistic</h5>
-                        <div class="d-flex align-items-center">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <?= $this->renderSection('content') ?>
         </div>
     </div>
@@ -240,15 +227,15 @@
     </script>
     <script>
         function dashboard() {
-            window.location.href = "<?= base_url('admin') ?>"
+            window.location.href = "<?= base_url('admingudang') ?>"
         }
 
-        function kpm() {
-            window.location.href = "<?= base_url('admin/kpm') ?>"
+        function beritaacara() {
+            window.location.href = "<?= base_url('admingudang/beritaacara') ?>"
         }
 
-        function ag() {
-            window.location.href = "<?= base_url('admin/ag') ?>"
+        function suratjalan() {
+            window.location.href = "<?= base_url('admingudang/suratjalan') ?>"
         }
     </script>
 </body>

@@ -5,31 +5,37 @@
         <div class="card-body">
             <h5 class="card-title mb-3">List Berita Acara</h5>
             <h6 class="card-subtitle">
-                Klik <a style="font-weight: bolder;" href="<?= base_url('admin/ag/create') ?>">disini</a> untuk menambahkan Berita Acara
+                Klik <a style="font-weight: bolder;" href="<?= base_url('admingudang/beritaacara/create') ?>">disini</a> untuk menambahkan Berita Acara, atau klik <a style="font-weight: bolder;" href="<?= base_url('admingudang/beritaacara/scan') ?>">disini</a> untuk upload berkas Berita Acara,
             </h6>
             <div class="table-responsive h6">
                 <table class="table" id="example">
                     <thead>
                         <tr>
                             <th scope="col">Tanggal</th>
-                            <th scope="col">Nomor Berita Acara</th>
-                            <th scope="col">Nama Lokasi Gudang</th>
+                            <th scope="col">Kode</th>
+                            <th scope="col">Status</th>
                             <th scope="col" class="text-center">Detail</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td class="text-center"><a href=""><i class="fas fa-search-plus"></i></a></td>
-                        </tr>
+                        <?php
+                        foreach ($databeritaacara as $data) :
+                        ?>
+                            <tr>
+                                <td><?= $data->tanggal_beritaacara_dibuat ?></td>
+                                <td><?= $data->kode_beritaacara ?></td>
+                                <td><?= $data->status_beritaacara ?></td>
+                                <td class="text-center"><a href="<?= base_url('admingudang/beritaacara/detail/' . $data->kode_beritaacara) ?>"><i class="fas fa-search-plus"></i></a></td>
+                            </tr>
+                        <?php
+                        endforeach
+                        ?>
                     </tbody>
                     <tfoot>
                         <tr>
                             <th>Cari Berdasarkan Tanggal</th>
-                            <th>Cari Berdasarkan Nomor Berita Acara</th>
-                            <th>Cari Berdasarkan Lokasi</th>
+                            <th>Cari Berdasarkan Kode</th>
+                            <th>Cari Berdasarkan Status</th>
                             <th></th>
                         </tr>
                     </tfoot>

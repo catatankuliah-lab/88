@@ -1,0 +1,168 @@
+CRITICAL - 2023-11-30 22:50:40 --> Undefined variable $data
+in APPPATH/Controllers/AdminGudangController.php on line 64.
+ 1 APPPATH/Controllers/AdminGudangController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php', 64)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->tambahitem()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+INFO - 2023-11-30 22:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 23:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 23:10:29 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 1726.
+ 1 SYSTEMPATH/BaseModel.php(1726): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH/Models/ItemBeritaAcaraModel.php(27): CodeIgniter\Model->update('Selesai Diproses')
+ 5 APPPATH/Controllers/AdminGudangController.php(91): App\Models\ItemBeritaAcaraModel->updateStatus('BA30112023105254', 'Selesai Diproses')
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->add_beritaacara()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:12:49 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 1726.
+ 1 SYSTEMPATH/BaseModel.php(1726): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH/Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH/Models/ItemBeritaAcaraModel.php(27): CodeIgniter\Model->update([...])
+ 5 APPPATH/Controllers/AdminGudangController.php(94): App\Models\ItemBeritaAcaraModel->updateStatus('BA30112023105254', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->add_beritaacara()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:25:53 --> Undefined variable $datakpm
+in APPPATH/Views/admin/kpm/detail.php on line 14.
+ 1 APPPATH/Views/admin/kpm/detail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datakpm', '/Applications/MAMP/htdocs/88/app/Views/admin/kpm/detail.php', 14)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/MAMP/htdocs/88/app/Views/admin/kpm/detail.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/kpm/detail', [], true)
+ 5 APPPATH/Controllers/AdminGudangController.php(106): view('admin/kpm/detail', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->add_beritaacara()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:26:57 --> Undefined variable $datakpm
+in APPPATH/Views/admin/kpm/detail.php on line 14.
+ 1 APPPATH/Views/admin/kpm/detail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datakpm', '/Applications/MAMP/htdocs/88/app/Views/admin/kpm/detail.php', 14)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/MAMP/htdocs/88/app/Views/admin/kpm/detail.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/kpm/detail', [], true)
+ 5 APPPATH/Controllers/AdminGudangController.php(106): view('admin/kpm/detail', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->add_beritaacara()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:51:08 --> Undefined variable $databeritaacara
+in APPPATH/Views/admingudang/beritaacara/index.php on line 22.
+ 1 APPPATH/Views/admingudang/beritaacara/index.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databeritaacara', '/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php', 22)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admingudang/beritaacara/index', [], true)
+ 5 APPPATH/Controllers/AdminGudangController.php(254): view('admingudang/beritaacara/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->add_beritaacara()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:53:32 --> Undefined variable $databeritaacara
+in APPPATH/Views/admingudang/beritaacara/index.php on line 22.
+ 1 APPPATH/Views/admingudang/beritaacara/index.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databeritaacara', '/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php', 22)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admingudang/beritaacara/index', [], true)
+ 5 APPPATH/Controllers/AdminGudangController.php(254): view('admingudang/beritaacara/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->add_beritaacara()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:57:49 --> Unclosed '{' on line 11
+in APPPATH/Controllers/AdminGudangController.php on line 257.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminGudangController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminGudangController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminGudangController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:57:50 --> Unclosed '{' on line 11
+in APPPATH/Controllers/AdminGudangController.php on line 257.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminGudangController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminGudangController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminGudangController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:57:51 --> Unclosed '{' on line 11
+in APPPATH/Controllers/AdminGudangController.php on line 257.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminGudangController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminGudangController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminGudangController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:57:56 --> Unclosed '{' on line 11
+in APPPATH/Controllers/AdminGudangController.php on line 257.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminGudangController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminGudangController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminGudangController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:57:59 --> Unclosed '{' on line 11
+in APPPATH/Controllers/AdminGudangController.php on line 257.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminGudangController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminGudangController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminGudangController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:58:04 --> Unclosed '{' on line 11
+in APPPATH/Controllers/AdminGudangController.php on line 257.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminGudangController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminGudangController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminGudangController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:58:15 --> Unclosed '{' on line 11
+in APPPATH/Controllers/AdminGudangController.php on line 257.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminGudangController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminGudangController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminGudangController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-11-30 23:58:30 --> Undefined variable $databeritaacara
+in APPPATH/Views/admingudang/beritaacara/index.php on line 22.
+ 1 APPPATH/Views/admingudang/beritaacara/index.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databeritaacara', '/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php', 22)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admingudang/beritaacara/index', [], true)
+ 5 APPPATH/Controllers/AdminGudangController.php(20): view('admingudang/beritaacara/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+INFO - 2023-11-30 23:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
