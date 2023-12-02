@@ -123,3 +123,22 @@ $routes->group('admingudang', function ($routes) {
     $routes->get('beritaacara/item/delete/(:segment)', 'AdminGudangController::removeitem/$1');
     $routes->get('beritaacara/preview/(:segment)', 'AdminGudangController::showFile/$1');
 });
+
+$routes->group('adminkecamatan', function ($routes) {
+    $routes->get('/', 'AdminKecamatanController::index');
+    // Routes KPM //
+    // $routes->get('/sptjm', 'AdminKecamatanController::sptjm');
+    // $routes->get('beritaacara/', 'AdminGudangController::index_beritaacara');
+    // $routes->get('beritaacara/create', 'AdminGudangController::create_beritaacara');
+    // $routes->post('beritaacara/add', 'AdminGudangController::add_beritaacara');
+    // $routes->get('beritaacara/detail/(:segment)', 'AdminGudangController::detail_beritaacara/$1');
+    // $routes->get('beritaacara/scan', 'AdminGudangController::scan_beritaacara');
+    // $routes->post('beritaacara/item/add', 'AdminGudangController::tambahitem');
+    // $routes->get('beritaacara/item/delete/(:segment)', 'AdminGudangController::removeitem/$1');
+    // $routes->get('beritaacara/preview/(:segment)', 'AdminGudangController::showFile/$1');
+});
+
+$routes->get('adminkecamatan/sptjm', 'AdminKecamatanController::sptjm');
+$routes->get('adminkecamatan/bast', 'AdminKecamatanController::bast');
+$routes->get('adminkecamatan/create', 'AdminKecamatanController::create');
+$routes->post('adminkecamatan/bast/add', 'AdminKecamatanController::add_bast');
