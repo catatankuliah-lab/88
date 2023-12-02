@@ -11,16 +11,11 @@ $routes->group('admin', function ($routes) {
     // Routes KPM //
     $routes->get('kpm/', 'AdminController::index_kpm');
     $routes->get('kpm/create', 'AdminController::create_kpm');
-<<<<<<< HEAD
     $routes->post('kpm/add', 'AdminController::add_kpm');
     $routes->get('kpm/edit/(:segment)', 'AdminController::edit_kpm/$1');
-=======
-    $routes->get('kpm/detail/(:segment)', 'AdminController::detail_kpm/$1');
->>>>>>> e92c19345d00c70e9abf7ef14d543ae21432d69b
     $routes->post('kpm/update/(:segment)', 'AdminController::update_kpm/$1');
     $routes->delete('kpm/delete/(:segment)', 'AdminController::delete_kpm/$1');
 
-<<<<<<< HEAD
     // Routes Admin Gudang //
     $routes->get('ag/', 'AdminController::index_ag');
     $routes->get('ag/create-ag', 'AdminController::create-ag');
@@ -28,33 +23,7 @@ $routes->group('admin', function ($routes) {
     $routes->get('ag/edit-ag/(:segment)', 'AdminController::edit-ag/$1');
     $routes->post('ag/update-ag/(:segment)', 'AdminController::update-ag/$1');
     $routes->delete('ag/delete-ag/(:segment)', 'AdminController::delete-ag/$1');
-=======
-$routes->group('admingudang', function ($routes) {
-    $routes->get('/', 'AdminGudangController::index');
-    // KPM
-    $routes->get('kpm', 'AdminGudangController::index_kpm');
-    $routes->get('kpm/create', 'AdminGudangController::create_kpm');
-    $routes->get('kpm/detail/(:segment)', 'AdminGudangController::detail_kpm/$1');
-    $routes->post('kpm/update/(:segment)', 'AdminGudangController::update_kpm/$1');
-    $routes->get('kpm/delete/(:segment)', 'AdminGudangController::delete_kpm/$1');
-    // Admin Gudang
-    $routes->get('ag', 'AdminGudangController::index_ag');
-    $routes->get('ag/create', 'AdminGudangController::create_ag');
-    $routes->post('ag/add', 'AdminGudangController::add_ag');
-    $routes->get('ag/detail/(:segment)', 'AdminGudangController::detail_ag/$1');
-    $routes->post('ag/update/(:segment)', 'AdminGudangController::update_ag/$1');
-    $routes->get('ag/delete/(:segment)', 'AdminGudangController::delete_ag/$1');
-});
-
-$routes->group('admin/ak', function ($routes) {
-    $routes->get('/', 'AdminController::index-ak');
-    $routes->get('/create-ak', 'AdminController::create-ak');
-    $routes->post('/add-ak', 'AdminController::add-ak');
-    $routes->get('/edit-ak/(:segment)', 'AdminController::edit-ak/$1');
-    $routes->post('/update-ak/(:segment)', 'AdminController::update-ak/$1');
-    $routes->get('/delete-ak/(:segment)', 'AdminController::delete-ak/$1');
-});
->>>>>>> e92c19345d00c70e9abf7ef14d543ae21432d69b
+    
 
     // Routes Admin Kecamatan //
     $routes->get('ak/', 'AdminController::index_ak');
@@ -135,4 +104,9 @@ $routes->group('admin/ak', function ($routes) {
     $routes->get('sptjm/edit-sptjm/(:segment)', 'AdminController::edit-sptjm/$1');
     $routes->post('sptjm/update-sptjm/(:segment)', 'AdminController::update-sptjm/$1');
     $routes->delete('sptjm/delete-sptjm/(:segment)', 'AdminController::delete-sptjm/$1');
+
+    // Routes Authentication //
+    $routes->get('login', 'AdminController::login');
+    $routes->get('register', 'AdminController::register');
 });
+
