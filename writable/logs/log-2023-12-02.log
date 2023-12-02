@@ -18,3 +18,127 @@ in APPPATH/Views/admingudang/beritaacara/index.php on line 22.
  8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+ERROR - 2023-12-02 15:48:54 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), '88', 3306, '', 0)
+#1 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+#7 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+#8 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+#9 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/88/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Applications/M...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+#6 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+#7 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+#8 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/88/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Applications/M...')
+#11 {main}
+CRITICAL - 2023-12-02 15:48:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `beritaacara`', [], false)
+ 3 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+ERROR - 2023-12-02 15:48:56 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), '88', 3306, '', 0)
+#1 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+#7 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+#8 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+#9 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/88/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Applications/M...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+#6 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+#7 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+#8 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/88/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Applications/M...')
+#11 {main}
+CRITICAL - 2023-12-02 15:48:56 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `beritaacara`', [], false)
+ 3 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-12-02 16:38:30 --> Undefined variable $databeritaacara
+in APPPATH/Views/admingudang/beritaacara/index.php on line 22.
+ 1 APPPATH/Views/admingudang/beritaacara/index.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databeritaacara', '/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php', 22)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admingudang/beritaacara/index', [], true)
+ 5 APPPATH/Controllers/AdminGudangController.php(310): view('admingudang/beritaacara/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->index_suratjalan()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-12-02 17:10:43 --> Undefined variable $databeritaacara
+in APPPATH/Views/admingudang/beritaacara/index.php on line 22.
+ 1 APPPATH/Views/admingudang/beritaacara/index.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databeritaacara', '/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php', 22)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admingudang/beritaacara/index', [], true)
+ 5 APPPATH/Controllers/AdminGudangController.php(310): view('admingudang/beritaacara/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->index_suratjalan()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-12-02 17:20:59 --> Undefined variable $databeritaacara
+in APPPATH/Views/admingudang/beritaacara/index.php on line 22.
+ 1 APPPATH/Views/admingudang/beritaacara/index.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databeritaacara', '/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php', 22)
+ 2 SYSTEMPATH/View/View.php(228): include('/Applications/MAMP/htdocs/88/app/Views/admingudang/beritaacara/index.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admingudang/beritaacara/index', [], true)
+ 5 APPPATH/Controllers/AdminGudangController.php(310): view('admingudang/beritaacara/index', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->index_suratjalan()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
