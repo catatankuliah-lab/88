@@ -184,7 +184,8 @@ class AdminController extends BaseController
     /** ================================ Admin Kecamatan ================================ */
     /** ================================================================================= */
 
-    public function index_ak(){
+    public function index_ak()
+    {
 
         $modelAK = new AdminKecamatan();
         $data = [
@@ -208,7 +209,7 @@ class AdminController extends BaseController
     }
 
     public function create_ak()
-    {   
+    {
         $data = [
             'halaman' => 'Admin Kecamatan',
             'menu1' => '',
@@ -239,7 +240,7 @@ class AdminController extends BaseController
         ];
         $modelAK->insert($data);
         return redirect()->to('/admin/ak/');
-    }   
+    }
 
     public function edit_ak($id)
     {
@@ -261,7 +262,7 @@ class AdminController extends BaseController
             'menu13' => '',
             'dataAK' => $modelAK->find($id)
         ];
-        return view('admin/adminkecamatan/detail', $data);   
+        return view('admin/adminkecamatan/detail', $data);
     }
 
     public function update_ak($id)
@@ -275,19 +276,16 @@ class AdminController extends BaseController
         ];
         $modelAK->update($id, $data);
         return redirect()->to('/admin/ak/');
-
     }
     public function delete_ak($id)
     {
         $modelAK = new AdminKecamatan();
         $modelAK->delete($id);
-        return redirect()->to('/admin/ak/');        
+        return redirect()->to('/admin/ak/');
     }
 
 
     /** ================================================================================= */
     /** ============================ End Admin Kecamatan ================================ */
     /** ================================================================================= */
-
 }
-?>
