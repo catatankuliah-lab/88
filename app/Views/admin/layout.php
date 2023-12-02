@@ -19,13 +19,10 @@
     <!-- Custom CSS -->
     <script src="<?= base_url('assetss/libs/jquery/dist/jquery.min.js') ?>"></script>
 
-<<<<<<< HEAD
     <link href="<?= base_url('dist/css/style.min.css') ?>" rel="stylesheet">
     <!-- CDN Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-=======
->>>>>>> e92c19345d00c70e9abf7ef14d543ae21432d69b
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
 
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>

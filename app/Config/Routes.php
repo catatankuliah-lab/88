@@ -16,13 +16,14 @@ $routes->group('admin', function ($routes) {
     $routes->post('kpm/update/(:segment)', 'AdminController::update_kpm/$1');
     $routes->delete('kpm/delete/(:segment)', 'AdminController::delete_kpm/$1');
 
-    // Routes Admin Gudang //
-    $routes->get('ag/', 'AdminController::index_ag');
-    $routes->get('ag/create-ag', 'AdminController::create-ag');
-    $routes->post('ag/add-ag', 'AdminController::add-ag');
-    $routes->get('ag/edit-ag/(:segment)', 'AdminController::edit-ag/$1');
-    $routes->post('ag/update-ag/(:segment)', 'AdminController::update-ag/$1');
-    $routes->delete('ag/delete-ag/(:segment)', 'AdminController::delete-ag/$1');
+    // // Routes Admin Gudang //
+    // $routes->get('ag/', 'AdminController::index_ag');
+    // $routes->get('ag/create-ag', 'AdminController::create-ag');
+    // $routes->post('ag/add-ag', 'AdminController::add-ag');
+    // $routes->get('ag/edit-ag/(:segment)', 'AdminController::edit-ag/$1');
+    // $routes->post('ag/update-ag/(:segment)', 'AdminController::update-ag/$1');
+        // $routes->delete('ag/delete-ag/(:segment)', 'AdminController::delete-ag/$1');
+    
 
     // Routes Admin Kecamatan //
     $routes->get('ak/', 'AdminController::index_ak');
@@ -103,6 +104,10 @@ $routes->group('admin', function ($routes) {
     $routes->get('sptjm/edit-sptjm/(:segment)', 'AdminController::edit-sptjm/$1');
     $routes->post('sptjm/update-sptjm/(:segment)', 'AdminController::update-sptjm/$1');
     $routes->delete('sptjm/delete-sptjm/(:segment)', 'AdminController::delete-sptjm/$1');
+
+    // Routes Authentication //
+    $routes->get('login', 'AdminController::login');
+    $routes->get('register', 'AdminController::register');
 });
 
 
@@ -120,3 +125,22 @@ $routes->group('admingudang', function ($routes) {
 
     $routes->get('suratjalan/', 'AdminGudangController::index_suratjalan');
 });
+
+$routes->group('adminkecamatan', function ($routes) {
+    $routes->get('/', 'AdminKecamatanController::index');
+    // Routes KPM //
+    // $routes->get('/sptjm', 'AdminKecamatanController::sptjm');
+    // $routes->get('beritaacara/', 'AdminGudangController::index_beritaacara');
+    // $routes->get('beritaacara/create', 'AdminGudangController::create_beritaacara');
+    // $routes->post('beritaacara/add', 'AdminGudangController::add_beritaacara');
+    // $routes->get('beritaacara/detail/(:segment)', 'AdminGudangController::detail_beritaacara/$1');
+    // $routes->get('beritaacara/scan', 'AdminGudangController::scan_beritaacara');
+    // $routes->post('beritaacara/item/add', 'AdminGudangController::tambahitem');
+    // $routes->get('beritaacara/item/delete/(:segment)', 'AdminGudangController::removeitem/$1');
+    // $routes->get('beritaacara/preview/(:segment)', 'AdminGudangController::showFile/$1');
+});
+
+$routes->get('adminkecamatan/sptjm', 'AdminKecamatanController::sptjm');
+$routes->get('adminkecamatan/bast', 'AdminKecamatanController::bast');
+$routes->get('adminkecamatan/create', 'AdminKecamatanController::create');
+$routes->post('adminkecamatan/bast/add', 'AdminKecamatanController::add_bast');

@@ -13,12 +13,12 @@ class KPMModel extends Model
     protected $returnType       = 'object';
     protected $allowedFields    = ['nomor_cekpos', 'nama_penerima', 'kode_kppk', 'provinsi', 'kota_kabupaten', 'kecamatan', 'kelurahan', 'nodanom', 'alamat', 'status', 'petugas_bayar', 'tanggal_bayar', 'kprk_bayar'];
 
-    public function getAllAdminGudang()
+    public function getAllByDesa($desa)
     {
-        $query = $this->db->table('admingudang')
-            ->select('admingudang.*, user.*')
-            ->join('user', 'user.id_user = admingudang.id_user', 'left')
+        $query = $this->db->table('teskpm')
+            ->select('testkpm.*')
+            ->where('testkpm.kelurahan',$desa)
             ->get();
-        return $query->getResult();
+        return $query->getResultObject();
     }
 }
