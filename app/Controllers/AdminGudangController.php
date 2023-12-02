@@ -296,4 +296,17 @@ class AdminGudangController extends BaseController
             ->setStatusCode(200)
             ->setBody($binary);
     }
+
+    public function index_suratjalan()
+    {
+        $modelBeritaAcara = new BeritaAcaraModel();
+        $data = [
+            'halaman' => 'Surat Jalan',
+            'menu1' => '',
+            'menu2' => '',
+            'menu3' => 'selected',
+            'datasuratjalan' => $modelBeritaAcara->findAll()
+        ];
+        return view('admingudang/beritaacara/index', $data);
+    }
 }

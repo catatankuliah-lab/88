@@ -117,4 +117,6 @@ $routes->group('admingudang', function ($routes) {
     $routes->post('beritaacara/item/add', 'AdminGudangController::tambahitem');
     $routes->get('beritaacara/item/delete/(:segment)', 'AdminGudangController::removeitem/$1');
     $routes->get('beritaacara/preview/(:segment)', 'AdminGudangController::showFile/$1');
+
+    $routes->get('suratjalan/', 'AdminGudangController::index_suratjalan');
 });
