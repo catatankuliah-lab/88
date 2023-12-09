@@ -11,23 +11,23 @@ class AdminKecamatanController extends BaseController
 {
     public function index()
     {
-         $data = [
+        $data = [
             'halaman' => 'Dashboard',
             'menu1' => 'selected',
             'menu2' => '',
             'menu3' => '',
-        
+
         ];
-        return view('adminkecamatan/layout', $data );
+        return view('adminkecamatan/layout', $data);
     }
-    
+
     public function sptjm()
     {
         $data = [
             'halaman' => 'SPTJM',
             'menu1' => '',
             'menu2' => 'selected',
-            'menu3' => '', 
+            'menu3' => '',
         ];
         return view('adminkecamatan/sptjm/index', $data);
     }
@@ -39,7 +39,7 @@ class AdminKecamatanController extends BaseController
             'halaman' => 'BAST',
             'menu1' => '',
             'menu2' => '',
-            'menu3' => 'selected', 
+            'menu3' => 'selected',
             'bast' => $modelBAST->findAll(),
         ];
         return view('adminkecamatan/bast/index', $data);
@@ -52,14 +52,15 @@ class AdminKecamatanController extends BaseController
             'halaman' => 'BAST',
             'menu1' => '',
             'menu2' => '',
-            'menu3' => 'selected', 
+            'menu3' => 'selected',
             'bast' => $modelBAST->findAll(),
-       
+
         ];
         return view('adminkecamatan/bast/create', $data);
     }
 
-    function add_bast() {
+    function add_bastt()
+    {
         // $validation = \Config\Services::validation();
         // $valid = [
         //     'no_bast' => 'required',
@@ -89,7 +90,7 @@ class AdminKecamatanController extends BaseController
             'module_width' => 1, // width of a single module in points
             'module_height' => 1 // height of a single module in points
         );
-        $no_bast = $this->request->getPost('no_bast');
+        $no_bast = $this->request->getPost('kode');
         $modelKPM = new KPMModel();
         // Set document properties
         $pdf->SetCreator('kalaitu developer');
@@ -164,40 +165,49 @@ class AdminKecamatanController extends BaseController
         $html = '<table border="1" style="width:100%">';
         $html .= '<tr style="text-align: center">
                     <th style="width:20px">No</th>
-                    <th style="width:150px">NAMA</th>
-                    <th style="width:70px">ALAMAT</th>
-                    <th style="width:40px">BARCODE</th>
-                    <th style="width:40px">JUMLAH (KG)</th>
+                    <th style="width:100px">NAMA</th>
+                    <th style="width:170px">ALAMAT</th>
+                    <th style="width:60px">BARCODE</th>
+                    <th style="width:50px">JUMLAH (KG)</th>
                     <th style="width:40px">TTD</th>
-                    <th style="width:180px">TANGGAL SERAH</th>
+                    <th style="width:100px">TANGGAL SERAH</th>
                 </tr>';
 
         // Fetch data from your database and populate the table
-
         $dataitem = $modelKPM->getAllByDesa('Kutawaringin');
         $jumlah = 0;
         $no = 1;
+        $posisi = 50;
         foreach ($dataitem as $row) {
             $jumlah = $jumlah + 10;
-            $html .= '<tr>';
+            $html .= '<tr height="40px">';
             $html .= '<td>' . $no++ . '</td>';
             $html .= '<td>' . $row->nama_penerima . '</td>';
-            $html .= '<td>' . $row->alamat . '</td>';
-            $html .= '<td></td>';
+            $html .= '<td>' . $row->alamat . '<br><br><br></td>';
+            $html .= '<td>'
+                . $pdf->write2DBarcode(
+                    $no_bast,
+                    'QRCODE,L',
+                    114,
+                    0,
+                    17,
+                    17,
+                    $style,
+                    'N'
+                ) . '</td>';
             $html .= '<td>10</td>';
             $html .= '<td></td>';
             $html .= '<td></td>';
             $html .= '</tr>';
         }
         $html .= '<tr>
-                    <td colspan="5">JUMLAH TOTAL</td>
+                    <td colspan="4">JUMLAH TOTAL</td>
                     <td>' . $jumlah . '</td>
                     <td colspan="2"></td>
                 </tr>';
         $html .= '</table>';
         // Output the HTML content to the PDF
         $pdf->writeHTML($html, true, false, true, false, '');
-       
         $directory = FCPATH . 'pdf/bast/'; // You can change this to your desired directory
         // Ensure the directory exists, if not, create it
         if (!is_dir($directory)) {
@@ -209,4 +219,63 @@ class AdminKecamatanController extends BaseController
         $pdf->Output($filePath, 'F');
     }
 
+    function add_bast()
+    {
+        $pdf = new TCPDF();
+        $no_bast = $this->request->getPost('kode');
+        $modelKPM = new KPMModel();
+
+        // Membuat objek PDF
+        $pdf = new TCPDF();
+        $pdf->SetCreator('Your Name');
+        $pdf->SetAuthor('Your Name');
+        $pdf->SetTitle('Title of the PDF');
+        $pdf->SetSubject('Subject of the PDF');
+        $pdf->SetKeywords('Keywords for the PDF');
+        $pdf->SetPrintHeader(false);
+        $pdf->SetPrintFooter(false);
+
+        // Tambahkan halaman
+        $pdf->AddPage();
+
+        // Membuat data untuk tabel
+        $data = array(
+            array('John Doe', 'john@example.com', 'https://www.example.com/1'),
+            array('Jane Doe', 'jane@example.com', 'https://www.example.com/2'),
+            // Tambahkan baris sesuai kebutuhan
+        );
+
+        // Atur lebar kolom tabel
+        $colWidths = array(40, 50, 50); // Sesuaikan sesuai kebutuhan
+
+        // Tambahkan tabel ke dalam PDF
+        $pdf->SetFillColor(200, 220, 255);
+        $pdf->SetFont('times', 'B', 12);
+        $pdf->Ln(0); // Pindah ke baris baru
+        $pdf->SetFont('times', '', 12);
+        foreach ($data as $row) {
+            $pdf->MultiCell($colWidths[0], 20, $row[0], 1, 'C', false, 0);
+            $pdf->MultiCell($colWidths[1], 20, $row[1], 1, 'C', false, 0);
+            // Membuat QR Code di dalam sel tabel
+            $qrCodeData = $row[2];
+            $qrCodeSize = 10; // Sesuaikan ukuran sesuai kebutuhan
+            $pdf->SetXY($pdf->GetX(), $pdf->GetY()); // Pindah ke posisi sebelum QR Code
+            // $pdf->Cell($colWidths[2], 20, '', 1, 1, 'C'); // Sel kosong untuk QR Code
+            $pdf->Image($pdf->write2DBarcode($qrCodeData, 'QRCODE,L', '', '', $qrCodeSize, $qrCodeSize), $pdf->getX() + 2, $pdf->getY() + 2, $qrCodeSize, $qrCodeSize);
+            $pdf->Ln(); // Pindah ke baris baru
+        }
+
+        $directory = FCPATH . 'pdf/bast/'; // You can change this to your desired directory
+        // Ensure the directory exists, if not, create it
+        if (!is_dir($directory)) {
+            mkdir($directory, 0777, true);
+        }
+        // Specify the file path
+        $filePath = $directory . '' . $no_bast . '.pdf';
+        // Save the PDF to the specified directory
+        $pdf->Output($filePath, 'F');
+    }
 }
+
+DTT - 312311000001
+31110351895

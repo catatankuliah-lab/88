@@ -16,8 +16,8 @@ class KPMModel extends Model
     public function getAllByDesa($desa)
     {
         $query = $this->db->table('teskpm')
-            ->select('testkpm.*')
-            ->where('testkpm.kelurahan',$desa)
+            ->select('teskpm.*')
+            ->where('teskpm.kelurahan', $desa)
             ->get();
         return $query->getResultObject();
     }

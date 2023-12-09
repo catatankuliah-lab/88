@@ -1,0 +1,108 @@
+ERROR - 2023-12-03 08:54:50 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), '88', 3306, '', 0)
+#1 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+#7 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+#8 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+#9 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/88/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Applications/M...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Applications/MAMP/htdocs/88/app/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+#6 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+#7 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+#8 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/88/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Applications/M...')
+#11 {main}
+CRITICAL - 2023-12-03 08:54:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `beritaacara`', [], false)
+ 3 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminGudangController.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminGudangController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminGudangController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+ERROR - 2023-12-03 08:54:53 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), '88', 3306, '', 0)
+#1 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Applications/MAMP/htdocs/88/app/Controllers/AdminKecamatanController.php(43): CodeIgniter\BaseModel->findAll()
+#7 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\AdminKecamatanController->bast()
+#8 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminKecamatanController))
+#9 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Applications/MAMP/htdocs/88/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Applications/M...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Applications/MAMP/htdocs/88/app/Controllers/AdminKecamatanController.php(43): CodeIgniter\BaseModel->findAll()
+#6 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(942): App\Controllers\AdminKecamatanController->bast()
+#7 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminKecamatanController))
+#8 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Applications/MAMP/htdocs/88/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Applications/MAMP/htdocs/88/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Applications/M...')
+#11 {main}
+CRITICAL - 2023-12-03 08:54:53 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bast`', [], false)
+ 3 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/AdminKecamatanController.php(43): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\AdminKecamatanController->bast()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminKecamatanController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-12-03 09:05:35 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH/Controllers/AdminKecamatanController.php on line 275.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminKecamatanController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminKecamatanController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminKecamatanController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminKecamatanController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
+CRITICAL - 2023-12-03 09:05:43 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH/Controllers/AdminKecamatanController.php on line 275.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/MAMP/htdocs/88/app/Controllers/AdminKecamatanController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminKecamatanController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminKecamatanController')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\AdminKecamatanController', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Applications/MAMP/htdocs/88/public/index.php')
